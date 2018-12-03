@@ -7,6 +7,13 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// jest 02_palindrome/test.js
+function palindrome01(str) {
+    return str === str.split('').reduce((reversed, element) => element + reversed, '');
+}
+
+function palindrome(str) {
+    return str.split('').every((char, i) => char === str[str.length - i - 1]);
+}
 
 module.exports = palindrome;
