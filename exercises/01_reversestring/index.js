@@ -15,15 +15,22 @@ function reverse1(str) {
 }
 
 function reverse2(str) {
+    // Create an empty string called 'reversed'
     let reversed = '';
 
+    // Get for each character from the provided string
     for (let character of str) {
+        // Take the character and add it to the START of 'reversed'
         reversed = character + reversed;
     }
+    // Return the variable 'reversed'
     return reversed;
 }
 
 function reverse(str) {
+    // Turn the provided string into an array by calling string.split with an empty string
+    // Set up the reduce helper function
+    // Take the for each character and add it to the START of 'reversed'
     return str.split('').reduce((reversed, character) => character + reversed, '')
 }
 
