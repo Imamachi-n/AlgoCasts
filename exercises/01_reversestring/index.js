@@ -8,7 +8,10 @@
 
 // jest 01_reversestring/test.js --watch
 function reverse1(str) {
-    return str.split("").reverse().join("")
+    // Turn 'str' into an array
+    // Call 'reverse' method on the array to reverse the permutation of the array
+    // Join the array back into a string
+    return str.split("").reverse().join("");
 }
 
 function reverse2(str) {
