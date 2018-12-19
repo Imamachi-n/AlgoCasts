@@ -45,4 +45,26 @@ function steps(n) {
   }
 }
 
+function steps(n) {
+
+}
+
+// Recursion Tips
+// Figure out teh bare minimum pieces of information to represent your problem
+// Give reasonable defaults to the bare minimum pieces of info
+// Check the base case. Is there any work left to do? If not, return
+// Do some work. Call your function again, making sure the arguments have changed in some fashion
+
+function printNumber(n, dec = 1) {
+  if (n === 0) {
+    return;
+  }
+
+  console.log(n);
+  printNumber(n - dec);
+}
+
+printNumber(10, 1);
+// expected output: 10 9 8 7 6 5 4 3 2 1
+
 module.exports = steps;
